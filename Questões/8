@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Ex8 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        double[] preco = new double[10];
+        int[] qtd = new int[10];
+
+        double totalGeral = 0;
+
+        for(int i = 0; i < 10; i++){
+
+            System.out.print("Preco do objeto " + (i+1) + ": ");
+            preco[i] = sc.nextDouble();
+
+            System.out.print("Quantidade vendida: ");
+            qtd[i] = sc.nextInt();
+        }
+
+        int maisVendido = 0;
+
+        System.out.println("RELATORIO");
+
+        for(int i = 0; i < 10; i++){
+
+            double total = preco[i] * qtd[i];
+
+            System.out.println("Objeto " + (i+1));
+            System.out.println("Quantidade: " + qtd[i]);
+            System.out.println("Preco: " + preco[i]);
+            System.out.println("Total: " + total);
+
+            totalGeral += total;
+
+            if(qtd[i] > qtd[maisVendido]){
+                maisVendido = i;
+            }
+
+        }
+
+        double comissao = totalGeral * 0.05;
+
+        System.out.println("Total vendido: " + totalGeral);
+        System.out.println("Comissao: " + comissao);
+        System.out.println("Objeto mais vendido posicao: " + (maisVendido+1));
+        System.out.println("Preco do objeto mais vendido: " + preco[maisVendido]);
+
+    }
+}

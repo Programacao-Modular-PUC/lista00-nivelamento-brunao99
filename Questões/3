@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Ex3 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n;
+
+        System.out.print("Digite o tamanho dos vetores: ");
+        n = sc.nextInt();
+
+        int[] prog = new int[n];
+        int[] mod = new int[n];
+
+        System.out.println("Matriculas Programacao:");
+
+        for(int i = 0; i < n; i++){
+            prog[i] = sc.nextInt();
+        }
+
+        System.out.println("Matriculas Modelagem:");
+
+        for(int i = 0; i < n; i++){
+            mod[i] = sc.nextInt();
+        }
+
+        System.out.println("Interseccao:");
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                if(prog[i] == mod[j]){
+                    System.out.println(prog[i]);
+                }
+            }
+        }
+
+    }
+}

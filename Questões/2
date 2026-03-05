@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Ex2 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int[] v = new int[3];
+
+        System.out.println("Digite x, y e z:");
+
+        for(int i = 0; i < 3; i++){
+            v[i] = sc.nextInt();
+        }
+
+        int x = v[0];
+        int y = v[1];
+        int z = v[2];
+
+        int maior = v[0];
+        int menor = v[0];
+
+        for(int i = 1; i < 3; i++){
+            if(v[i] > maior){
+                maior = v[i];
+            }
+
+            if(v[i] < menor){
+                menor = v[i];
+            }
+        }
+
+        System.out.println("Maior: " + maior);
+        System.out.println("Menor: " + menor);
+
+        if(x >= y && x <= z){
+            System.out.println("x esta dentro do intervalo");
+        }else{
+            System.out.println("x esta fora do intervalo");
+        }
+
+        if(x % y == 0 && x % z == 0){
+            System.out.println("x e divisivel por y e z");
+        }else{
+            System.out.println("x nao e divisivel por y e z");
+        }
+
+    }
+}
