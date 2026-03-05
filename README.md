@@ -3,4 +3,5 @@ Lista 00 - Programação Modular -Nivelamente de AEDs I e Programação Básica
 
 ## Aluno 
 
-* Nome completo do aluno 1
+* Bruno Henrique de Aguiar Xavier
+  
